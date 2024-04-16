@@ -116,6 +116,7 @@ const Navbar = () => {
                   {navigation.map((item) => (
                     <button
                       className="block"
+                      key={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <Link
