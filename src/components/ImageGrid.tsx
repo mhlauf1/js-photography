@@ -30,9 +30,8 @@ const ImageGrid = ({ images, noMargin }: ImageGridProps) => {
           transition={{ staggerChildren: 0.1 }}
         >
           {images.map((image, index) => (
-            <div className="mb-4">
+            <div key={index} className="mb-4">
               <Photo
-                key={index}
                 title={image.title}
                 src={image.src}
                 date={image.date}
