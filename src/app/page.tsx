@@ -5,7 +5,7 @@ import ImageGrid from "@/components/ImageGrid";
 import Container from "@/components/Container";
 import {
   fourGridImages,
-  threeGridImages,
+  fourGridImages3,
   fourGridImages2,
 } from "@/lib/imageData";
 
@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <main className="dark-bg">
       <Hero />
-      <ImageGrid images={threeGridImages} />
+      <ImageGrid images={fourGridImages3} />
       <ImageGrid images={fourGridImages} />
       <ImageGrid images={fourGridImages2} />
-      <Container>
+      {/* <Container>
         <div className="flex justify-end w-full">
           <Link
             className="underline text-gray-300 hover:text-white duration-500"
@@ -25,7 +25,7 @@ export default function Home() {
             All Photos
           </Link>
         </div>
-      </Container>
+      </Container> */}
     </main>
   );
 }

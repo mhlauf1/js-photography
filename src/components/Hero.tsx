@@ -30,12 +30,12 @@ const Hero = () => {
   return (
     <div className="dark-bg">
       <Container>
-        <section className="pt-36 pb-24">
+        <section className="pt-28 md:pt-36 pb-24">
           <div className="flex mb-16">
-            <div className="w-4/12" />
-            <div className="w-8/12">
+            <div className="w-0 md:w-4/12" />
+            <div className="w-full md:w-8/12">
               <motion.h1
-                className="h1 text-gray-300 w-[18ch]"
+                className="h1 text-gray-300 md:w-[18ch]"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -48,7 +48,7 @@ const Hero = () => {
               </motion.h1>
             </div>
           </div>
-          <div className="flex mb-64 gap-x-2">
+          <div className="md:flex hidden mb-64 gap-x-2">
             <Photo
               title="Olympic National Park"
               src="/olympic-2.jpeg"
@@ -61,6 +61,22 @@ const Hero = () => {
               src="/olympic-1.jpeg"
               date="June, 2022"
               cols="8"
+              animation={fadeInDelayed}
+            />
+          </div>
+          <div className="flex flex-wrap md:hidden mb-64 gap-y-6">
+            <Photo
+              title="Olympic National Park"
+              src="/olympic-2.jpeg"
+              date="June, 2022"
+              cols="12"
+              animation={fadeInDelayed}
+            />
+            <Photo
+              title="Olympic National Park"
+              src="/olympic-1.jpeg"
+              date="June, 2022"
+              cols="12"
               animation={fadeInDelayed}
             />
           </div>

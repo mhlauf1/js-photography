@@ -37,3 +37,16 @@
   transition: all 0.4s;
   font-weight: 300;
 }
+
+@media (max-width: 787px) {
+  .project {
+    padding: 50px;
+    flex-direction: column;
+  }
+
+  .project h2 {
+    text-align: center;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+}

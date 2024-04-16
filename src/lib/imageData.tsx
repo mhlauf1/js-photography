@@ -26,7 +26,7 @@ export const fourGridImages = [
   },
 ];
 
-export const threeGridImages = [
+export const fourGridImages3 = [
   {
     title: "Olympic National Park",
     src: "/olympic-3.jpeg",
@@ -40,6 +40,11 @@ export const threeGridImages = [
   {
     title: "Olympic National Park",
     src: "/olympic-5.jpeg",
+    date: "June, 2022",
+  },
+  {
+    title: "Olympic National Park",
+    src: "/rocky-mountains-5.jpg",
     date: "June, 2022",
   },
 ];

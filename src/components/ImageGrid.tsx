@@ -1,9 +1,8 @@
-"use client";
 import React from "react";
 import Photo from "./Photo";
-import { fadeIn } from "@/lib/animations";
 import Container from "./Container";
-import { useInView } from "react-intersection-observer";
+import { fadeIn } from "@/lib/animations";
+import { motion } from "framer-motion";
 
 // Expecting an array of image objects
 type ImageData = {
@@ -18,31 +17,29 @@ type ImageGridProps = {
 };
 
 const ImageGrid = ({ images, noMargin }: ImageGridProps) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.15, // Adjust this value to control when the animation starts
-  });
-
-  const cols = 12 / images.length; // Divide the grid equally based on the number of images
+  // Define responsive columns based on the number of images, for mobile they should all take full width
+  const cols = images.length >= 4 ? "3" : images.length === 3 ? "4" : "6"; // Set column span based on number of images
 
   return (
-    <div ref={ref} className="dark-bg">
+    <div className={`dark-bg ${noMargin ? "pb-0" : "pb-64"}`}>
       <Container>
-        <div className={`flex ${noMargin ? "pb-0" : "pb-64"}  gap-x-2`}>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ staggerChildren: 0.1 }}
+        >
           {images.map((image, index) => (
             <Photo
               key={index}
               title={image.title}
               src={image.src}
               date={image.date}
-              cols={`${cols}`}
-              animation={{
-                ...fadeIn,
-                animate: inView ? fadeIn.animate : fadeIn.initial,
-              }}
+              cols={cols}
+              animation={fadeIn}
             />
           ))}
-        </div>
+        </motion.div>
       </Container>
     </div>
   );

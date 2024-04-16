@@ -33,7 +33,7 @@ const Photo = ({ src, title, date, cols, animation }: Props) => {
     <motion.div
       {...animationProps}
       ref={ref}
-      className={`w-${cols}/12 text-gray-400 hover:text-white duration-500 cursor-pointer`}
+      className={`w-full md:w-${cols}/12 text-gray-400 hover:text-white duration-500 cursor-pointer`}
     >
       <Image
         alt={title}
