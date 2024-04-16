@@ -3,11 +3,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import ImageGrid from "@/components/ImageGrid";
 import Container from "@/components/Container";
-import {
-  fourGridImages,
-  threeGridImages,
-  fourGridImages2,
-} from "@/lib/imageData";
+import { fourGridImages, fourGridImages2 } from "@/lib/imageData";
 
 export default function Gallery() {
   return (
