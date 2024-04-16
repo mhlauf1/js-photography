@@ -10,7 +10,7 @@ function Footer({}: Props) {
         <div className="flex justify-between items-start">
           <div className="flex w-5/12 flex-col gap-8">
             <h2 className="h2">
-              Let's start a conversation about your next destination.
+              Let&apos;s start a conversation about your next destination.
             </h2>
             <span>jsphotography@gmail.com</span>
           </div>
