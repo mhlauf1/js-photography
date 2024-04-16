@@ -28,6 +28,9 @@ li {
   line-height: 100%;
   letter-spacing: -4px;
   font-family: var(--font-inter);
+  /* background: -webkit-linear-gradient(left, rgb(243 244 246), rgb(209 213 219));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .h2 {

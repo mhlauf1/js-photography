@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./style.module.css";
 
-export default function index({ index, title, setModal, date }) {
+export default function Destination({ index, title, setModal, date }) {
   return (
     <div
       onMouseEnter={() => {

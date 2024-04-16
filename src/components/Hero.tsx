@@ -35,7 +35,7 @@ const Hero = () => {
             <div className="w-0 md:w-4/12" />
             <div className="w-full md:w-8/12">
               <motion.h1
-                className="h1 text-gray-300 md:w-[18ch]"
+                className="h1 text-gray-200 md:w-[18ch]"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
