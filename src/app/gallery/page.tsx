@@ -9,13 +9,9 @@ import {
   fourGridImages2,
 } from "@/lib/imageData";
 
-export default function Home() {
+export default function Gallery() {
   return (
-    <main className="dark-bg">
-      <Hero />
-      <ImageGrid images={threeGridImages} />
-      <ImageGrid images={fourGridImages} />
-      <ImageGrid images={fourGridImages2} />
+    <main className="dark-bg min-h-screen">
       <Container>
         <div className="flex justify-end w-full">
           <Link

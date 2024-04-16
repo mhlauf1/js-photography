@@ -2,32 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #fff;
+  font-family: var(--font-inter);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.dark-bg {
+  background-color: #040404;
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+p,
+ul,
+li {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+}
+
+.h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 100%;
+  letter-spacing: -4px;
+  font-family: var(--font-inter);
+}
+
+.h2 {
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-family: var(--font-inter);
+  color: white;
+}
+
+.h3 {
+  font-size: 2.9rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+.h4 {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: 5px;
+  font-family: var(--font-inter);
+  opacity: 0.5;
+}
+
+.footer-name {
+  font-size: 15vw;
+  line-height: 120%;
+  letter-spacing: 0px;
+  font-weight: 800;
+  font-family: var(--font-inter);
+  text-align: center;
+  color: #c4c4c4;
+}
+
+.caption {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.light {
+  font-weight: 300;
+  opacity: 0.7;
 }

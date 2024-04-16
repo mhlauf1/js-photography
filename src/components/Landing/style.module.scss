@@ -1,0 +1,80 @@
+.landing{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: #828282;
+
+    img{
+      object-fit: cover;
+    }
+    
+    .sliderContainer{
+      position: absolute;
+      top: calc(0vh + 150px);
+    }
+    
+    .slider{
+      position: relative;
+      color: rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+    }
+
+        // Add to your style.module.scss
+    .secondaryImage {
+      position: absolute;
+      bottom: 0%; // Adjust according to your screenshot
+      right: 15%; // Adjust according to your screenshot
+      width: 200px; // Adjust to the size of your image
+      height: auto;
+      z-index: 20; // Make sure this is above the text's z-index
+
+      // If you are using layout='fill', you may not need width and height
+      // but you should then contain and center the image using objectFit and objectPosition
+    }
+    
+    .slider p{
+      position: relative;
+      margin: 0px;
+      font-size: 120px;
+      font-weight: 500;
+      color: white;
+      padding-right: 50px;
+    }
+    
+    .slider p:nth-of-type(2){
+      position: absolute;
+      left: 100%;
+      top: 0;
+    }
+    // .overlay {
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: rgba(0, 0, 0, 0.3); // Black with 0.2 opacity
+    //   z-index: 10; // Ensure it sits above the image
+    // }
+  
+    .description{
+      position: absolute;
+      bottom: 10%;
+      left: 35px;
+      color: white;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 115%;
+      p{
+        margin: 0px;
+        z-index: 20;
+      }
+      svg{
+        transform: scale(2);
+        margin-bottom: 100px;
+      }
+    }
+  }
+  
